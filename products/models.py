@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields import NullBooleanField
 
 class Product(models.Model):
   title = models.CharField(max_length=200)
@@ -6,4 +7,4 @@ class Product(models.Model):
   likes = models.PositiveIntegerField(default=0)
 
 class User(models.Model):
-  pass
+  name = models.CharField(max_length=200, null=True)
